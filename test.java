@@ -2,7 +2,10 @@ import java.util.*;
 
 class test {
     public static void main(String[] args){
-        System.out.println(compress(args[0]));
+    	int[][] arr = {{1,2,3},
+        			   {4,5,6},
+        			   {7,8,9}};
+        System.out.println(Arrays.deepToString(rotate(arr,3)));
 
         return;
     }
@@ -64,5 +67,17 @@ class test {
 		if (repeats != 1) newStr+=repeats;
 		
 		return (newStr.length()<str.length()?newStr:str);
+	}
+	
+	// 1.6 Rotate an NxN matrix 90 degrees clockwise
+	public static int[][] rotate (int[][] arr, int n){
+		int[][] newArr = new int[n][n];
+		
+		for (int i=0; i<n; i++){
+			for (int j=0; j<n; j++){
+				newArr[j][n-i-1] = arr[i][j];
+			}
+		}
+		return newArr;
 	}
 }
