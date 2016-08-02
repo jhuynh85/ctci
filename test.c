@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
+/* 1.2 Function for reversing a string in place */
 void reverse (char* str){
     int length = strlen(str);
     int i;
